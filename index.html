@@ -15,9 +15,23 @@
         <div class="login-container">
             <div class="login-card">
                 <div class="login-header">
-                    <i class="fas fa-balance-scale"></i>
-                    <h1>Portal do Escritório</h1>
-                    <p>Sistema de Gestão de Clientes</p>
+                    <div class="logo">
+                        <div class="logo-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L4 6V12C4 16.55 7.84 20.74 12 22C16.16 20.74 20 16.55 20 12V6L12 2Z" fill="url(#shieldGradient)"/>
+                                <defs>
+                                    <linearGradient id="shieldGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                        <stop offset="0%" style="stop-color:#4e49fc;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#3d37e8;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div class="logo-text">
+                            <div class="logo-main-text">Meu Guardião</div>
+                            <div class="logo-sub-text">Prevenção de fraudes jurídicas</div>
+                        </div>
+                    </div>
                 </div>
                 <form id="loginForm" class="login-form">
                     <div class="form-group">
@@ -45,8 +59,23 @@
     <div id="dashboardPage" class="page">
         <nav class="navbar">
             <div class="nav-brand">
-                <i class="fas fa-balance-scale"></i>
-                <span>Portal do Escritório</span>
+                <div class="nav-logo">
+                    <div class="nav-logo-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L4 6V12C4 16.55 7.84 20.74 12 22C16.16 20.74 20 16.55 20 12V6L12 2Z" fill="url(#navShieldGradient)"/>
+                            <defs>
+                                <linearGradient id="navShieldGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#4e49fc;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#3d37e8;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="nav-logo-text">
+                        <div class="nav-logo-main-text">Meu Guardião</div>
+                        <div class="nav-logo-sub-text">Prevenção de fraudes jurídicas</div>
+                    </div>
+                </div>
             </div>
             <div class="nav-menu">
                 <button class="nav-btn active" data-page="dashboard">
@@ -72,8 +101,8 @@
             <!-- Dashboard Content -->
             <div id="dashboardContent" class="content-section active">
                 <div class="page-header">
-                    <h1>Painel de Controle</h1>
-                    <p>Bem-vindo ao portal de gestão do seu escritório</p>
+                    <h1>Painel de Prevenção de Fraudes Jurídicas</h1>
+                    <p>Bem-vindo, <span id="officeName">Escritório</span></p>
                 </div>
                 
                 <div class="stats-grid">
@@ -92,7 +121,7 @@
                         </div>
                         <div class="stat-content">
                             <h3>12</h3>
-                            <p>Casos Ativos</p>
+                            <p>Fraudes analisadas</p>
                         </div>
                     </div>
                     <div class="stat-card">
@@ -101,18 +130,10 @@
                         </div>
                         <div class="stat-content">
                             <h3>R$ 45.230</h3>
-                            <p>Receita Mensal</p>
+                            <p>Valor prevenido de roubo</p>
                         </div>
                     </div>
-                    <div class="stat-card dark">
-                        <div class="stat-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div class="stat-content">
-                            <h3>8</h3>
-                            <p>Tarefas Pendentes</p>
-                        </div>
-                    </div>
+                   
                 </div>
 
                 <div class="reports-section">

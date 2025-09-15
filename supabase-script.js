@@ -29,6 +29,7 @@ function checkExistingSession() {
         currentUser = JSON.parse(savedSession);
         showPage('dashboard');
         loadClients();
+        updateOfficeName();
     }
 }
 
@@ -99,6 +100,7 @@ async function handleLogin(e) {
         document.getElementById('loginForm').reset();
         showPage('dashboard');
         loadClients();
+        updateOfficeName();
         showSuccessMessage(`Bem-vindo, ${currentUser.nome}!`);
         
     } catch (error) {
@@ -291,6 +293,13 @@ function formatDate(dateString) {
 
 function updateStats() {
     document.getElementById('totalClients').textContent = clients.length;
+}
+
+function updateOfficeName() {
+    const officeNameElement = document.getElementById('officeName');
+    if (officeNameElement && currentUser && currentUser.nome) {
+        officeNameElement.textContent = currentUser.nome;
+    }
 }
 
 function showSuccessMessage(message) {
