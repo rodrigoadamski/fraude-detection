@@ -214,43 +214,17 @@ body {
 /* Logo Styles */
 .logo {
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: var(--space-4);
     margin-bottom: var(--space-6);
 }
 
-.logo-icon {
-    width: 48px;
-    height: 48px;
-    flex-shrink: 0;
-}
-
-.logo-icon svg {
-    width: 100%;
-    height: 100%;
-    filter: drop-shadow(0 2px 4px rgba(78, 73, 252, 0.2));
-}
-
-.logo-text {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-1);
-}
-
-.logo-main-text {
-    color: var(--text-primary);
-    font-size: var(--text-xl);
-    font-weight: var(--font-bold);
-    letter-spacing: -0.025em;
-    line-height: var(--leading-tight);
-}
-
-.logo-sub-text {
-    color: var(--text-secondary);
-    font-size: var(--text-sm);
-    font-weight: var(--font-normal);
-    letter-spacing: 0.01em;
-    line-height: var(--leading-normal);
+.logo-image {
+    height: 60px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(78, 73, 252, 0.1));
 }
 
 .login-form {
@@ -355,41 +329,14 @@ body {
 .nav-logo {
     display: flex;
     align-items: center;
-    gap: var(--space-3);
 }
 
-.nav-logo-icon {
-    width: 32px;
-    height: 32px;
-    flex-shrink: 0;
-}
-
-.nav-logo-icon svg {
-    width: 100%;
-    height: 100%;
-    filter: drop-shadow(0 1px 2px rgba(78, 73, 252, 0.2));
-}
-
-.nav-logo-text {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-1);
-}
-
-.nav-logo-main-text {
-    color: var(--text-primary);
-    font-size: var(--text-lg);
-    font-weight: var(--font-bold);
-    letter-spacing: -0.025em;
-    line-height: var(--leading-tight);
-}
-
-.nav-logo-sub-text {
-    color: var(--text-secondary);
-    font-size: var(--text-xs);
-    font-weight: var(--font-normal);
-    letter-spacing: 0.01em;
-    line-height: var(--leading-normal);
+.nav-logo-image {
+    height: 40px;
+    width: auto;
+    max-width: 200px;
+    object-fit: contain;
+    filter: drop-shadow(0 1px 2px rgba(78, 73, 252, 0.1));
 }
 
 .nav-menu {
@@ -828,17 +775,9 @@ body {
         padding: var(--space-4);
     }
 
-    .nav-logo-main-text {
-        font-size: var(--text-base);
-    }
-
-    .nav-logo-sub-text {
-        font-size: var(--text-xs);
-    }
-
-    .nav-logo-icon {
-        width: 28px;
-        height: 28px;
+    .nav-logo-image {
+        height: 32px;
+        max-width: 150px;
     }
 
     .nav-menu {
@@ -874,17 +813,9 @@ body {
         gap: var(--space-3);
     }
 
-    .logo-main-text {
-        font-size: var(--text-lg);
-    }
-
-    .logo-sub-text {
-        font-size: var(--text-xs);
-    }
-
-    .logo-icon {
-        width: 40px;
-        height: 40px;
+    .logo-image {
+        height: 50px;
+        max-width: 180px;
     }
 }
 
