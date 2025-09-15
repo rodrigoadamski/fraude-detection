@@ -6,6 +6,8 @@
     <title>Gestão de Clientes - Escritório de Advocacia</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Biblioteca do Supabase -->
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
 </head>
 <body>
     <!-- Login Page -->
@@ -19,8 +21,8 @@
                 </div>
                 <form id="loginForm" class="login-form">
                     <div class="form-group">
-                        <label for="username">Usuário</label>
-                        <input type="text" id="username" name="username" required>
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" required>
                     </div>
                     <div class="form-group">
                         <label for="password">Senha</label>
@@ -31,10 +33,9 @@
                         Entrar
                     </button>
                 </form>
-                <div class="demo-credentials">
-                    <p><strong>Credenciais de Demonstração:</strong></p>
-                    <p>Usuário: admin</p>
-                    <p>Senha: password123</p>
+                <div class="loading-message" id="loadingMessage" style="display: none;">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Verificando credenciais...</p>
                 </div>
             </div>
         </div>
@@ -85,7 +86,7 @@
                             <p>Total de Clientes</p>
                         </div>
                     </div>
-                    <div class="stat-card">
+                    <div class="stat-card dark">
                         <div class="stat-icon">
                             <i class="fas fa-calendar-check"></i>
                         </div>
@@ -103,7 +104,7 @@
                             <p>Receita Mensal</p>
                         </div>
                     </div>
-                    <div class="stat-card">
+                    <div class="stat-card dark">
                         <div class="stat-icon">
                             <i class="fas fa-clock"></i>
                         </div>
@@ -204,10 +205,6 @@
                             <label for="clientEmail">E-mail (Opcional)</label>
                             <input type="email" id="clientEmail" name="clientEmail">
                         </div>
-                        <div class="form-group">
-                            <label for="clientNotes">Observações (Opcional)</label>
-                            <textarea id="clientNotes" name="clientNotes" rows="4"></textarea>
-                        </div>
                         <div class="form-actions">
                             <button type="button" class="btn btn-secondary" onclick="showPage('clients')">
                                 Cancelar
@@ -223,6 +220,8 @@
         </main>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Scripts -->
+    <script src="config.js"></script>
+    <script src="supabase-script.js"></script>
 </body>
 </html>
