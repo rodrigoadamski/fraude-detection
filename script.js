@@ -44,9 +44,9 @@ function handleLogin(e) {
     if (username === 'admin' && password === 'password123') {
         currentUser = { username, role: 'admin' };
         showPage('dashboard');
-        showSuccessMessage('Login successful! Welcome to your dashboard.');
+        showSuccessMessage('Login realizado com sucesso! Bem-vindo ao seu painel.');
     } else {
-        alert('Invalid credentials. Please use:\nUsername: admin\nPassword: password123');
+        alert('Credenciais inválidas. Por favor, use:\nUsuário: admin\nSenha: password123');
     }
 }
 
@@ -99,26 +99,26 @@ function loadClients() {
         clients = [
             {
                 id: 1,
-                name: 'John Smith',
-                phone: '(555) 123-4567',
-                email: 'john.smith@email.com',
-                notes: 'Corporate law client',
+                name: 'João Silva',
+                phone: '(11) 99999-1234',
+                email: 'joao.silva@email.com',
+                notes: 'Cliente de direito empresarial',
                 dateAdded: new Date('2024-01-15').toISOString()
             },
             {
                 id: 2,
-                name: 'Sarah Johnson',
-                phone: '(555) 987-6543',
-                email: 'sarah.j@email.com',
-                notes: 'Family law case',
+                name: 'Maria Santos',
+                phone: '(11) 88888-5678',
+                email: 'maria.santos@email.com',
+                notes: 'Caso de direito de família',
                 dateAdded: new Date('2024-01-20').toISOString()
             },
             {
                 id: 3,
-                name: 'Mike Davis',
-                phone: '(555) 456-7890',
-                email: 'mike.davis@email.com',
-                notes: 'Real estate transaction',
+                name: 'Miguel Costa',
+                phone: '(11) 77777-9012',
+                email: 'miguel.costa@email.com',
+                notes: 'Transação imobiliária',
                 dateAdded: new Date('2024-02-01').toISOString()
             }
         ];
@@ -151,7 +151,7 @@ function handleAddClient(e) {
     
     // Reset form and show success message
     e.target.reset();
-    showSuccessMessage(`Client "${newClient.name}" has been added successfully!`);
+    showSuccessMessage(`Cliente "${newClient.name}" foi adicionado com sucesso!`);
     
     // Navigate back to clients list
     showPage('clients');
@@ -167,8 +167,8 @@ function displayClients() {
             <tr>
                 <td colspan="4" class="empty-state">
                     <i class="fas fa-users"></i>
-                    <h3>No clients found</h3>
-                    <p>Add your first client to get started</p>
+                    <h3>Nenhum cliente encontrado</h3>
+                    <p>Adicione seu primeiro cliente para começar</p>
                 </td>
             </tr>
         `;
@@ -184,7 +184,7 @@ function displayClients() {
             <td>
                 <button class="btn btn-danger" onclick="deleteClient(${client.id})">
                     <i class="fas fa-trash"></i>
-                    Delete
+                    Excluir
                 </button>
             </td>
         `;
@@ -193,12 +193,12 @@ function displayClients() {
 }
 
 function deleteClient(clientId) {
-    if (confirm('Are you sure you want to delete this client?')) {
+    if (confirm('Tem certeza de que deseja excluir este cliente?')) {
         clients = clients.filter(client => client.id !== clientId);
         saveClients();
         displayClients();
         updateStats();
-        showSuccessMessage('Client deleted successfully!');
+        showSuccessMessage('Cliente excluído com sucesso!');
     }
 }
 
@@ -218,8 +218,8 @@ function filterClients() {
             <tr>
                 <td colspan="4" class="empty-state">
                     <i class="fas fa-search"></i>
-                    <h3>No clients found</h3>
-                    <p>Try adjusting your search terms</p>
+                    <h3>Nenhum cliente encontrado</h3>
+                    <p>Tente ajustar seus termos de busca</p>
                 </td>
             </tr>
         `;
@@ -235,7 +235,7 @@ function filterClients() {
             <td>
                 <button class="btn btn-danger" onclick="deleteClient(${client.id})">
                     <i class="fas fa-trash"></i>
-                    Delete
+                    Excluir
                 </button>
             </td>
         `;
@@ -246,7 +246,7 @@ function filterClients() {
 // Utility Functions
 function formatDate(dateString) {
     const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', {
+    return date.toLocaleDateString('pt-BR', {
         year: 'numeric',
         month: 'short',
         day: 'numeric'
@@ -284,13 +284,15 @@ function showSuccessMessage(message) {
     }, 5000);
 }
 
-// Phone number formatting
+// Phone number formatting (Brazilian format)
 document.getElementById('clientPhone').addEventListener('input', function(e) {
     let value = e.target.value.replace(/\D/g, '');
-    if (value.length >= 6) {
-        value = value.replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3');
+    if (value.length >= 11) {
+        value = value.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
+    } else if (value.length >= 7) {
+        value = value.replace(/(\d{2})(\d{4})(\d{0,4})/, '($1) $2-$3');
     } else if (value.length >= 3) {
-        value = value.replace(/(\d{3})(\d{0,3})/, '($1) $2');
+        value = value.replace(/(\d{2})(\d{0,5})/, '($1) $2');
     }
     e.target.value = value;
 });

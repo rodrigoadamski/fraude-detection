@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Law Firm Client Management</title>
+    <title>Gestão de Clientes - Escritório de Advocacia</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -14,27 +14,27 @@
             <div class="login-card">
                 <div class="login-header">
                     <i class="fas fa-balance-scale"></i>
-                    <h1>Law Firm Portal</h1>
-                    <p>Client Management System</p>
+                    <h1>Portal do Escritório</h1>
+                    <p>Sistema de Gestão de Clientes</p>
                 </div>
                 <form id="loginForm" class="login-form">
                     <div class="form-group">
-                        <label for="username">Username</label>
+                        <label for="username">Usuário</label>
                         <input type="text" id="username" name="username" required>
                     </div>
                     <div class="form-group">
-                        <label for="password">Password</label>
+                        <label for="password">Senha</label>
                         <input type="password" id="password" name="password" required>
                     </div>
                     <button type="submit" class="login-btn">
                         <i class="fas fa-sign-in-alt"></i>
-                        Login
+                        Entrar
                     </button>
                 </form>
                 <div class="demo-credentials">
-                    <p><strong>Demo Credentials:</strong></p>
-                    <p>Username: admin</p>
-                    <p>Password: password123</p>
+                    <p><strong>Credenciais de Demonstração:</strong></p>
+                    <p>Usuário: admin</p>
+                    <p>Senha: password123</p>
                 </div>
             </div>
         </div>
@@ -45,24 +45,24 @@
         <nav class="navbar">
             <div class="nav-brand">
                 <i class="fas fa-balance-scale"></i>
-                <span>Law Firm Portal</span>
+                <span>Portal do Escritório</span>
             </div>
             <div class="nav-menu">
                 <button class="nav-btn active" data-page="dashboard">
                     <i class="fas fa-chart-bar"></i>
-                    Dashboard
+                    Painel
                 </button>
                 <button class="nav-btn" data-page="clients">
                     <i class="fas fa-users"></i>
-                    Clients
+                    Clientes
                 </button>
                 <button class="nav-btn" data-page="addClient">
                     <i class="fas fa-user-plus"></i>
-                    Add Client
+                    Adicionar Cliente
                 </button>
                 <button class="nav-btn logout-btn" id="logoutBtn">
                     <i class="fas fa-sign-out-alt"></i>
-                    Logout
+                    Sair
                 </button>
             </div>
         </nav>
@@ -71,8 +71,8 @@
             <!-- Dashboard Content -->
             <div id="dashboardContent" class="content-section active">
                 <div class="page-header">
-                    <h1>Dashboard</h1>
-                    <p>Welcome to your law firm management portal</p>
+                    <h1>Painel de Controle</h1>
+                    <p>Bem-vindo ao portal de gestão do seu escritório</p>
                 </div>
                 
                 <div class="stats-grid">
@@ -82,7 +82,7 @@
                         </div>
                         <div class="stat-content">
                             <h3 id="totalClients">0</h3>
-                            <p>Total Clients</p>
+                            <p>Total de Clientes</p>
                         </div>
                     </div>
                     <div class="stat-card">
@@ -91,7 +91,7 @@
                         </div>
                         <div class="stat-content">
                             <h3>12</h3>
-                            <p>Active Cases</p>
+                            <p>Casos Ativos</p>
                         </div>
                     </div>
                     <div class="stat-card">
@@ -99,8 +99,8 @@
                             <i class="fas fa-dollar-sign"></i>
                         </div>
                         <div class="stat-content">
-                            <h3>$45,230</h3>
-                            <p>Monthly Revenue</p>
+                            <h3>R$ 45.230</h3>
+                            <p>Receita Mensal</p>
                         </div>
                     </div>
                     <div class="stat-card">
@@ -109,21 +109,21 @@
                         </div>
                         <div class="stat-content">
                             <h3>8</h3>
-                            <p>Pending Tasks</p>
+                            <p>Tarefas Pendentes</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="reports-section">
-                    <h2>Recent Activity</h2>
+                    <h2>Atividade Recente</h2>
                     <div class="activity-list">
                         <div class="activity-item">
                             <div class="activity-icon">
                                 <i class="fas fa-user-plus"></i>
                             </div>
                             <div class="activity-content">
-                                <p><strong>New client added:</strong> John Smith</p>
-                                <span class="activity-time">2 hours ago</span>
+                                <p><strong>Novo cliente adicionado:</strong> João Silva</p>
+                                <span class="activity-time">2 horas atrás</span>
                             </div>
                         </div>
                         <div class="activity-item">
@@ -131,8 +131,8 @@
                                 <i class="fas fa-phone"></i>
                             </div>
                             <div class="activity-content">
-                                <p><strong>Client call scheduled:</strong> Sarah Johnson</p>
-                                <span class="activity-time">4 hours ago</span>
+                                <p><strong>Ligação agendada:</strong> Maria Santos</p>
+                                <span class="activity-time">4 horas atrás</span>
                             </div>
                         </div>
                         <div class="activity-item">
@@ -140,8 +140,8 @@
                                 <i class="fas fa-file-alt"></i>
                             </div>
                             <div class="activity-content">
-                                <p><strong>Document reviewed:</strong> Contract for Mike Davis</p>
-                                <span class="activity-time">1 day ago</span>
+                                <p><strong>Documento revisado:</strong> Contrato de Miguel Costa</p>
+                                <span class="activity-time">1 dia atrás</span>
                             </div>
                         </div>
                     </div>
@@ -151,18 +151,18 @@
             <!-- Clients List Content -->
             <div id="clientsContent" class="content-section">
                 <div class="page-header">
-                    <h1>Clients</h1>
-                    <p>Manage your client database</p>
+                    <h1>Clientes</h1>
+                    <p>Gerencie sua base de dados de clientes</p>
                 </div>
                 
                 <div class="clients-controls">
                     <div class="search-box">
                         <i class="fas fa-search"></i>
-                        <input type="text" id="clientSearch" placeholder="Search clients...">
+                        <input type="text" id="clientSearch" placeholder="Buscar clientes...">
                     </div>
                     <button class="btn btn-primary" onclick="showPage('addClient')">
                         <i class="fas fa-plus"></i>
-                        Add New Client
+                        Adicionar Novo Cliente
                     </button>
                 </div>
 
@@ -170,10 +170,10 @@
                     <table class="clients-table">
                         <thead>
                             <tr>
-                                <th>Name</th>
-                                <th>Phone</th>
-                                <th>Date Added</th>
-                                <th>Actions</th>
+                                <th>Nome</th>
+                                <th>Telefone</th>
+                                <th>Data de Cadastro</th>
+                                <th>Ações</th>
                             </tr>
                         </thead>
                         <tbody id="clientsTableBody">
@@ -186,35 +186,35 @@
             <!-- Add Client Content -->
             <div id="addClientContent" class="content-section">
                 <div class="page-header">
-                    <h1>Add New Client</h1>
-                    <p>Register a new client in your database</p>
+                    <h1>Adicionar Novo Cliente</h1>
+                    <p>Cadastre um novo cliente em sua base de dados</p>
                 </div>
                 
                 <div class="form-container">
                     <form id="addClientForm" class="client-form">
                         <div class="form-group">
-                            <label for="clientName">Client Name *</label>
+                            <label for="clientName">Nome do Cliente *</label>
                             <input type="text" id="clientName" name="clientName" required>
                         </div>
                         <div class="form-group">
-                            <label for="clientPhone">Phone Number *</label>
+                            <label for="clientPhone">Número de Telefone *</label>
                             <input type="tel" id="clientPhone" name="clientPhone" required>
                         </div>
                         <div class="form-group">
-                            <label for="clientEmail">Email (Optional)</label>
+                            <label for="clientEmail">E-mail (Opcional)</label>
                             <input type="email" id="clientEmail" name="clientEmail">
                         </div>
                         <div class="form-group">
-                            <label for="clientNotes">Notes (Optional)</label>
+                            <label for="clientNotes">Observações (Opcional)</label>
                             <textarea id="clientNotes" name="clientNotes" rows="4"></textarea>
                         </div>
                         <div class="form-actions">
                             <button type="button" class="btn btn-secondary" onclick="showPage('clients')">
-                                Cancel
+                                Cancelar
                             </button>
                             <button type="submit" class="btn btn-primary">
                                 <i class="fas fa-save"></i>
-                                Add Client
+                                Adicionar Cliente
                             </button>
                         </div>
                     </form>
